@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+section {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #ff4f8b, #dff1ff);
+}
+section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  /* background: #000; */
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+section .color {
+  position: absolute;
+  filter: blur(150px);
+}
+
+section .color:nth-child(1) {
+  background: #ff359b;
+  width: 600px;
+  height: 600px;
+  top: -350px;
+}
+
+section .color:nth-child(2) {
+  background: #00d2ff;
+  width: 500px;
+  height: 500px;
+  bottom: -150px;
+}
+
+section .color:nth-child(3) {
+  background: #fffd87;
+  width: 300px;
+  height: 300px;
+  bottom: 50px;
+  right: 0px;
+}
+
+.box {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #ff4f8b, #dff1ff);
+}
+
+.box-6 {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  /* background: url(iPhone.png) #fff; */
+  background: #ff99ac;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(-40deg) skew(20deg, 10deg);
+  z-index: 10;
+  box-shadow: -120px 110px 5px rgba(0, 0, 0, 0.06);
+  /* border: 1px dashed red; */
+  transition: 0.5s;
+}
+
+.glass {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  background: rgba(198, 251, 255, 0.5);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(0.65);
+  border-radius: 5px;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.glass .reflection {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 18px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.5s;
+  /* border: 1px dashed red; */
+  z-index: 11;
+}
+.glass .reflection-2 {
+  content: "";
+  position: absolute;
+  top: -140px;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.5s;
+  /* border: 1px dashed red; */
+  z-index: 11;
+}
+
+.glass img {
+  transform: rotate(90deg) scale(0.15);
+}
+
+.box-6:hover {
+  transform: rotate(-40deg) skew(20deg, 10deg) translate(30px, -30px);
+  box-shadow: -150px 140px 10px rgba(0, 0, 0, 0.06);
+}
+
+.boxface {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -87px;
+  width: 86px;
+  /* box height */
+  height: 100%;
+  /* background: url(text.png) #f2f2f2; */
+  background: #fae0e4;
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: right;
+  transform: skewY(-43deg);
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+
+  border-bottom: 2px solid #e68a9b;
+  /* box z-axis */
+  /* border: 1px dashed red; */
+  display: flex;
+  justify-content: center;
+}
+
+.boxface img {
+  transform: scale(0.08);
+  /* border: 1px dashed red; */
+  position: absolute;
+  bottom: -50px;
+}
+
+.box-6::after {
+  content: "";
+  position: absolute;
+  bottom: -83px;
+  left: 0;
+  width: 100%;
+  /* box height */
+  height: 82px;
+  background: 
+  /* url(logo.png)  */ #e68a9b;
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: top;
+  transform: skewX(-47deg);
+
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-left-radius: 2px;
+
+  /* box z-axis */
+  /* border: 1px dashed red; */
+}
